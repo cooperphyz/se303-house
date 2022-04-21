@@ -29,7 +29,7 @@ class House
     end
 
     def recite
-        "This is the house that Jack built.\n\n" +
+        "#{line(1)}\n" +
         "This is the malt that lay in the house that Jack built.\n\n" +
         "This is the rat that ate the malt that lay in the house that Jack built.\n\n" +
         "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n\n" +
