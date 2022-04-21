@@ -29,6 +29,7 @@ class House
     end
 
     def recite
+        line_numbers = [1,2,3,4,4,5,6,7,8,9,10,11,12]
         "#{line(1)}\n" +
         "#{line(2)}\n" +
         "#{line(3)}\n" +
