@@ -30,7 +30,7 @@ class House
 
     def recite
         "#{line(1)}\n" +
-        "This is the malt that lay in the house that Jack built.\n\n" +
+        "#{line(2)}\n" +
         "This is the rat that ate the malt that lay in the house that Jack built.\n\n" +
         "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n\n" +
         "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n\n" +
