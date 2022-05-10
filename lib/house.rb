@@ -17,7 +17,9 @@ class House
     end
 
     def cow_with_crumpled(number=nil)
-        "cow with the crumpled horn that tossed the "
+        if number >=6
+            "cow with the crumpled horn that tossed the "
+        end
     end
 
     def maiden_all_forelorn(number=nil)
