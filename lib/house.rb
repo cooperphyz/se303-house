@@ -2,7 +2,7 @@ class House
     def line(number)
         case number
         when 1
-            "This is the house that Jack built.\n"
+            "This is the #{horse_and_hound(number)}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}#{cat_that_killed(number)}#{rat_that_ate(number)}#{malt_that_lay(number)}house that Jack built.\n"
         else
             "This is the #{horse_and_hound(number)}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}#{cat_that_killed(number)}#{rat_that_ate(number)}#{malt_that_lay(number)}house that Jack built.\n"
         end
