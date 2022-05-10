@@ -22,6 +22,10 @@ class House
         end
     end
 
+    def priest_all_shaven(number=nil)
+    
+    end
+
     def rooster_crowed(number=nil)
         if number >=10
             "rooster that crowed in the morn that woke the "
