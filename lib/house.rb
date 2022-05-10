@@ -20,6 +20,10 @@ class House
         end
     end
 
+    def man_all_tattered(number=nil)
+        "man all tattered and torn that kissed the "
+    end
+
     def priest_all_shaven(number=nil)
         if number >=9
             "priest all shaven and shorn that married the "
