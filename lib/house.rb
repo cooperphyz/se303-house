@@ -12,6 +12,10 @@ class House
         end
     end
 
+    def cat_that_killed(number=nil)
+        "cat that killed the "
+    end
+
     def dog_that_worried(number=nil)
         if number >=5
             "dog that worried the "
