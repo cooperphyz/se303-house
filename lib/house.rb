@@ -10,6 +10,10 @@ class House
         end
     end
 
+    def rat_that_ate(number=nil)
+        "rat that ate the "
+    end
+
     def cat_that_killed(number=nil)
         if number >=4
             "cat that killed the "
