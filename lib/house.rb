@@ -26,6 +26,10 @@ class House
         end
     end
 
+    def farmer_sowing(number=nil)
+
+    end
+
     def horse_and_hound(number=nil)
         if number == 12
             "horse and the hound and the horn that belonged to the "
