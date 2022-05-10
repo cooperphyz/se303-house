@@ -23,7 +23,9 @@ class House
     end
 
     def priest_all_shaven(number=nil)
-        "priest all shaven and shorn that married the "
+        if number >=9
+            "priest all shaven and shorn that married the "
+        end
     end
 
     def rooster_crowed(number=nil)
