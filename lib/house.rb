@@ -28,7 +28,7 @@ class House
         end
     end
 
-    def horse_and_hound
+    def horse_and_hound(number=nil)
         "horse and the hound and the horn that belonged to the"
     end
 
