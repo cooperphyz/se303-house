@@ -28,6 +28,10 @@ class House
         end
     end
 
+    def horse_and_hound
+
+    end
+
     def recite
         (1..12).map { |number| line(number) }.join("\n")
     end
