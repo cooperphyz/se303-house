@@ -8,6 +8,10 @@ class House
         end
     end
 
+    def malt_that_lay(number=nil)
+        "malt that lay in the "
+    end
+
     def rat_that_ate(number=nil)
         if number >=3
             "rat that ate the "
