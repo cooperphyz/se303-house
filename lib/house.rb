@@ -7,8 +7,6 @@ class House
             "This is the malt that lay in the house that Jack built.\n"
         when 3
             "This is the rat that ate the malt that lay in the house that Jack built.\n"
-        when 4
-            "This is the #{horse_and_hound(number)}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
         else
             "This is the #{horse_and_hound(number)}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
         end
