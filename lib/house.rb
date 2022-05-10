@@ -23,7 +23,7 @@ class House
     end
 
     def priest_all_shaven(number=nil)
-    
+        "priest all shaven and shorn that married "
     end
 
     def rooster_crowed(number=nil)
