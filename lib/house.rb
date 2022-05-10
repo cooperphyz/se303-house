@@ -25,7 +25,7 @@ class House
     end
 
     def rooster_crowed
-    
+        "rooster that crowed in the morn that woke the "
     end
 
     def farmer_sowing(number=nil)
