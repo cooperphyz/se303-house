@@ -15,7 +15,9 @@ class House
     end
 
     def dog_that_worried(number=nil)
-        "dog that worried the "
+        if number >=5
+            "dog that worried the "
+        end
     end
 
     def cow_with_crumpled(number=nil)
