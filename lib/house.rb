@@ -24,6 +24,10 @@ class House
         end
     end
 
+    def rooster_crowed
+    
+    end
+
     def farmer_sowing(number=nil)
         if number >= 11
             "farmer sowing his corn that kept the "
