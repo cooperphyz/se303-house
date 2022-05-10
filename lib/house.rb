@@ -18,6 +18,10 @@ class House
         end
     end
 
+    def maiden_all_forelorn(number=nil)
+        "maiden all forlorn that milked the "
+    end
+
     def man_all_tattered(number=nil)
         if number >=8
             "man all tattered and torn that kissed the "
