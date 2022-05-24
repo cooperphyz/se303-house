@@ -81,6 +81,7 @@ class House
         if number >= 2
             "malt that lay in the "
         end
+        HouseNumber.new(number).malt_that_lay(number)
     end
 
     def rat_that_ate(number=nil)
