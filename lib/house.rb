@@ -98,9 +98,7 @@ class House
     end
 
     def maiden_all_forelorn(number=nil)
-        if number >=7
-            "maiden all forlorn that milked the "
-        end
+        HouseNumber.new(number).maiden_all_forelorn(number)
     end
 
     def man_all_tattered(number=nil)
