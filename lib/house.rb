@@ -10,11 +10,11 @@ class HouseNumber
     end
 
     def opener
-        "This is the "
+        "This is the"
     end
 
     def to_s
-        "This is the #{concatenated_lines}"
+        "#{opener} #{concatenated_lines}"
     end
 
     def malt_that_lay
