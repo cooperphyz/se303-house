@@ -10,7 +10,7 @@ class HouseNumber
     end
 
     def to_s
-        "This is the #{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
+        "This is the #{concatenated_lines}"
     end
 
     def malt_that_lay
