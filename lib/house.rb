@@ -76,7 +76,7 @@ class HouseNumber
     end
 end
 
-class HouseNumberPirate
+class HouseNumberPirate < HouseNumber
 
 end
 
