@@ -29,7 +29,7 @@ class HouseNumber
         end
     end
 
-    def cow_with_crumpled(number=nil)
+    def cow_with_crumpled
         if number >=6
             "cow with the crumpled horn that tossed the "
         end
@@ -94,7 +94,7 @@ class House
     end
 
     def cow_with_crumpled(number=nil)
-        HouseNumber.new(number).cow_with_crumpled(number)
+        HouseNumber.new(number).cow_with_crumpled
     end
 
     def maiden_all_forelorn(number=nil)
