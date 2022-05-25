@@ -85,12 +85,14 @@ class HouseNumber
 end
 
 class HouseNumberPirate < HouseNumber
-    
+    def opener
+        "Thar be the"
+    end
 end
 
 class House
     def line(number)
-        house_number = HouseNumber.new(number)
+        house_number = HouseNumberPirate.new(number)
 
         "#{house_number}house that Jack built.\n"
     end
