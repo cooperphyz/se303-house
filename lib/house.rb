@@ -5,6 +5,10 @@ class HouseNumber
         @number = number
     end
 
+    def to_s
+
+    end
+
     def malt_that_lay
         if number >= 2
             "malt that lay in the "
