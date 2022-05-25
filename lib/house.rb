@@ -102,9 +102,7 @@ class House
     end
 
     def man_all_tattered(number=nil)
-        if number >=8
-            "man all tattered and torn that kissed the "
-        end
+        HouseNumber.new(number).man_all_tattered(number)
     end
 
     def priest_all_shaven(number=nil)
