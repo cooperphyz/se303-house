@@ -74,7 +74,8 @@ end
 
 class House
     def line(number)
-        "This is the #{horse_and_hound(number)}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}#{cat_that_killed(number)}#{rat_that_ate(number)}#{malt_that_lay(number)}house that Jack built.\n"
+        house_number = HouseNumber.new(number)
+        "This is the #{house_number.horse_and_hound}#{farmer_sowing(number)}#{rooster_crowed(number)}#{priest_all_shaven(number)}#{man_all_tattered(number)}#{maiden_all_forelorn(number)}#{cow_with_crumpled(number)}#{dog_that_worried(number)}#{cat_that_killed(number)}#{rat_that_ate(number)}#{malt_that_lay(number)}house that Jack built.\n"
     end
 
     def malt_that_lay(number=nil)
