@@ -65,7 +65,7 @@ class HouseNumber
         end
     end
 
-    def horse_and_hound(number=nil)
+    def horse_and_hound
         if number == 12
             "horse and the hound and the horn that belonged to the "
         end
@@ -118,7 +118,7 @@ class House
     end
 
     def horse_and_hound(number=nil)
-        HouseNumber.new(number).horse_and_hound(number)
+        HouseNumber.new(number).horse_and_hound
     end
 
     def recite
