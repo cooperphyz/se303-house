@@ -106,9 +106,7 @@ class House
     end
 
     def priest_all_shaven(number=nil)
-        if number >=9
-            "priest all shaven and shorn that married the "
-        end
+        HouseNumber.new(number).priest_all_shaven(number)
     end
 
     def rooster_crowed(number=nil)
