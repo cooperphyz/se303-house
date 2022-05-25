@@ -77,7 +77,9 @@ class HouseNumber
 end
 
 class HouseNumberPirate < HouseNumber
-
+    def to_s
+        "#{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
+    end
 end
 
 class House
