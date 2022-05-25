@@ -47,7 +47,7 @@ class HouseNumber
         end
     end
 
-    def priest_all_shaven(number=nil)
+    def priest_all_shaven
         if number >=9
             "priest all shaven and shorn that married the "
         end
@@ -106,7 +106,7 @@ class House
     end
 
     def priest_all_shaven(number=nil)
-        HouseNumber.new(number).priest_all_shaven(number)
+        HouseNumber.new(number).priest_all_shaven
     end
 
     def rooster_crowed(number=nil)
