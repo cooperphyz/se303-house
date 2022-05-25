@@ -23,7 +23,7 @@ class HouseNumber
         end
     end
 
-    def dog_that_worried(number=nil)
+    def dog_that_worried
         if number >=5
             "dog that worried the "
         end
@@ -90,7 +90,7 @@ class House
     end
 
     def dog_that_worried(number=nil)
-        HouseNumber.new(number).dog_that_worried(number)
+        HouseNumber.new(number).dog_that_worried
     end
 
     def cow_with_crumpled(number=nil)
