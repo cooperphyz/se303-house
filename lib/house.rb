@@ -79,6 +79,7 @@ end
 class House
     def line(number)
         house_number = HouseNumber.new(number)
+        
         "This is the #{house_number}house that Jack built.\n"
     end
 
