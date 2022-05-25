@@ -53,7 +53,7 @@ class HouseNumber
         end
     end
 
-    def rooster_crowed(number=nil)
+    def rooster_crowed
         if number >=10
             "rooster that crowed in the morn that woke the "
         end
@@ -110,7 +110,7 @@ class House
     end
 
     def rooster_crowed(number=nil)
-        HouseNumber.new(number).rooster_crowed(number)
+        HouseNumber.new(number).rooster_crowed
     end
 
     def farmer_sowing(number=nil)
