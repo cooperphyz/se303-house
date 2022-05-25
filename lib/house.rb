@@ -5,7 +5,7 @@ class HouseNumber
         @number = number
     end
 
-    def malt_that_lay(number=nil)
+    def malt_that_lay(delete_me=nil)
         if number >= 2
             "malt that lay in the "
         end
