@@ -78,7 +78,7 @@ class House
     end
 
     def malt_that_lay(number=nil)
-        HouseNumber.new(number).malt_that_lay(number)
+        HouseNumber.new(number).malt_that_lay
     end
 
     def rat_that_ate(number=nil)
