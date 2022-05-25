@@ -5,6 +5,10 @@ class HouseNumber
         @number = number
     end
 
+    def concatenated_lines
+        "#{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
+    end
+
     def to_s
         "This is the #{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
     end
@@ -78,7 +82,7 @@ end
 
 class HouseNumberPirate < HouseNumber
     def to_s
-        "#{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
+        "Thar be the #{horse_and_hound}#{farmer_sowing}#{rooster_crowed}#{priest_all_shaven}#{man_all_tattered}#{maiden_all_forelorn}#{cow_with_crumpled}#{dog_that_worried}#{cat_that_killed}#{rat_that_ate}#{malt_that_lay}"
     end
 end
 
