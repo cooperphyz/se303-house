@@ -114,9 +114,7 @@ class House
     end
 
     def farmer_sowing(number=nil)
-        if number >= 11
-            "farmer sowing his corn that kept the "
-        end
+        HouseNumber.new(number).farmer_sowing(number)
     end
 
     def horse_and_hound(number=nil)
