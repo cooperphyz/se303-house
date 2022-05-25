@@ -17,7 +17,7 @@ class HouseNumber
         end
     end
 
-    def cat_that_killed(number=nil)
+    def cat_that_killed
         if number >=4
             "cat that killed the "
         end
@@ -86,7 +86,7 @@ class House
     end
 
     def cat_that_killed(number=nil)
-        HouseNumber.new(number).cat_that_killed(number)
+        HouseNumber.new(number).cat_that_killed
     end
 
     def dog_that_worried(number=nil)
