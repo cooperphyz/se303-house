@@ -82,9 +82,7 @@ class House
     end
 
     def rat_that_ate(number=nil)
-        if number >=3
-            "rat that ate the "
-        end
+        HouseNumber.new(number).rat_that_ate(number)
     end
 
     def cat_that_killed(number=nil)
