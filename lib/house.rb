@@ -90,6 +90,10 @@ class HouseNumberPirate < HouseNumber
     end
 end
 
+class HouseNumberRandom < HouseNumber
+
+end
+
 class House
     def line(number)
         house_number = HouseNumberPirate.new(number)
