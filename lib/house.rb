@@ -36,7 +36,7 @@ class HouseNumber
 
     def malt_that_lay
         if number >= 2
-            "malt that lay in the "
+            fragments[10]
         end
     end
 
