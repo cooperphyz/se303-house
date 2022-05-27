@@ -135,50 +135,6 @@ class House
         ]
     end
 
-    def malt_that_lay(number=nil)
-        HouseNumber.new(number).malt_that_lay
-    end
-
-    def rat_that_ate(number=nil)
-        HouseNumber.new(number).rat_that_ate
-    end
-
-    def cat_that_killed(number=nil)
-        HouseNumber.new(number).cat_that_killed
-    end
-
-    def dog_that_worried(number=nil)
-        HouseNumber.new(number).dog_that_worried
-    end
-
-    def cow_with_crumpled(number=nil)
-        HouseNumber.new(number).cow_with_crumpled
-    end
-
-    def maiden_all_forelorn(number=nil)
-        HouseNumber.new(number).maiden_all_forelorn
-    end
-
-    def man_all_tattered(number=nil)
-        HouseNumber.new(number).man_all_tattered
-    end
-
-    def priest_all_shaven(number=nil)
-        HouseNumber.new(number).priest_all_shaven
-    end
-
-    def rooster_crowed(number=nil)
-        HouseNumber.new(number).rooster_crowed
-    end
-
-    def farmer_sowing(number=nil)
-        HouseNumber.new(number).farmer_sowing
-    end
-
-    def horse_and_hound(number=nil)
-        HouseNumber.new(number).horse_and_hound
-    end
-
     def recite
         (1..12).map { |number| line(number) }.join("\n")
     end
