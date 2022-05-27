@@ -115,7 +115,7 @@ class House
     def line(number)
         house_number = HouseNumber.new(number)
 
-        "#{house_number}house that Jack built.\n"
+        "This is the %s.\n" % fragments.last(number).join('')
     end
 
     def fragments
