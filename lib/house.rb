@@ -1,11 +1,12 @@
 class House
 
+    attr_reader :opener
     def initialize(opener="This is ")
         @opener = opener
     end
 
     def line(number)
-        "This is the %s.\n" % fragments.last(number).join('')
+        "#{opener}the %s.\n" % fragments.last(number).join('')
     end
 
     def fragments
