@@ -1,8 +1,9 @@
 class House
 
-    attr_reader :opener
-    def initialize(opener="This is ")
+    attr_reader :opener, :randomized
+    def initialize(opener="This is ", randomized=false)
         @opener = opener
+        @randomized = randomized
     end
 
     def line(number)
