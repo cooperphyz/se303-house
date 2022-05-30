@@ -4,11 +4,11 @@ class House
     def initialize(opener="This is ", randomized=false)
         @opener = opener
         @randomized = randomized
-        @verses = fragments.shuffle
+        @verses = fragments.append('house that Jack built',)
     end
 
     def line(number)
-        "#{opener}the %s.\n" % fragments.last(number).join('')
+        "#{opener}the %s.\n" % verses.last(number).join('')
     end
 
     def fragments
@@ -23,8 +23,7 @@ class House
           'dog that worried the ',
           'cat that killed the ',
           'rat that ate the ',
-          'malt that lay in the ',
-          'house that Jack built',
+          'malt that lay in the '
         ]
     end
 
