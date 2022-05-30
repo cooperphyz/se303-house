@@ -4,7 +4,11 @@ class House
     def initialize(opener="This is ", randomized=false)
         @opener = opener
         @randomized = randomized
-        @verses = fragments.append('house that Jack built',)
+        if(randomized==true)
+            @verses = fragments.append('house that Jack built')
+        else
+            @verses = fragments.append('house that Jack built')
+        end
     end
 
     def line(number)
