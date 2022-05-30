@@ -5,10 +5,7 @@ class House
         @opener = opener
         @randomized = randomized
         @verses = fragments
-        if(randomized==false)
-            @verses = verses.shuffle
-        end
-        @verses.append('house that Jack built')
+        @verses = (randomized ? fragments.shuffle : fragments).append('house that Jack built')
     end
 
     def line(number)
