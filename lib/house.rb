@@ -5,7 +5,7 @@ class House
         @opener = opener
         @randomized = randomized
         if(randomized==true)
-            @verses = fragments.append('house that Jack built')
+            @verses = fragments.shuffle.append('house that Jack built')
         else
             @verses = fragments.append('house that Jack built')
         end
