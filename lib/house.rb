@@ -24,7 +24,13 @@ class HouseVerse
     end
 
     def lyrics
-        (randomized ? fragments.shuffle : fragments).append('house that Jack built')
+        newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
+        newArrayOne.shuffle!
+        newArrayTwo.shuffle!
+
+        newArrayThree = Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }
+
+        return (randomized ? fragments.shuffle : fragments).append('house that Jack built')
     end
     
     def fragments
