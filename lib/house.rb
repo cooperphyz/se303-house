@@ -23,6 +23,10 @@ class HouseVerse
     def initialize(randomized)
         @randomized = randomized
     end
+
+    def lyrics
+
+    end
     
     def fragments
         [
