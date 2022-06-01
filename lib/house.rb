@@ -31,3 +31,7 @@ class House
         (1..12).map { |number| line(number) }.join("\n")
     end
 end
+
+class HouseVerse
+
+end
