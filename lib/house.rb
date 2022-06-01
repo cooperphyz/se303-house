@@ -2,10 +2,10 @@ class House
 
     attr_reader :opener, :randomized, :verses
     def initialize(opener="This is ", randomized=false)
-        house_verse = HouseVerse.new(randomized)
+        house_verse = HouseVerse.new(randomized).fragments
         @opener = opener
         @randomized = randomized
-        @verses = (randomized ? fragments.shuffle : fragments).append('house that Jack built')
+        @verses = (randomized ? house_verse.shuffle : house_verse).append('house that Jack built')
     end
 
     def line(number)
