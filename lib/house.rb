@@ -31,8 +31,6 @@ class HouseVerse
         newArrayThree = Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
 
         return newArrayThree
-        
-        #return (randomized ? fragments.shuffle : fragments).append('house that Jack built')    
     end
     
     def fragments
