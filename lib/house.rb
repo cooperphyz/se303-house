@@ -2,7 +2,6 @@ class House
 
     attr_reader :opener, :randomized, :verses
     def initialize(opener="This is ", randomized=false)
-        #house_verse = HouseVerse.new(randomized).lyrics
         @opener = opener
         @randomized = randomized
         @verses = HouseVerse.new(randomized).lyrics
