@@ -18,7 +18,7 @@ class House
 end
 
 class HouseVerse
-    attr_reader :number
+    attr_reader :randomized
 
     def initialize(randomized)
         @randomized = randomized
