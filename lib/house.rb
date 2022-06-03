@@ -5,12 +5,12 @@ class House
         @pirate = pirate
         @randomized = randomized
         if randomized == true 
-            @verses = HouseVerseRandom.new(randomized).lyrics
+            @verses = HouseVerseRandom.new.lyrics
         end
         if pirate == true
-            @verses = HouseVersePirate.new(randomized).lyrics
+            @verses = HouseVersePirate.new.lyrics
         else
-            @verses = HouseVerse.new(randomized).lyrics
+            @verses = HouseVerse.new.lyrics
         end
         
     end
