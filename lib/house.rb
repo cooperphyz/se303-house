@@ -73,5 +73,7 @@ class HouseVerseRandom < HouseVerse
 end
 
 class HouseVersePirate < HouseVerse
-
+    def opener  
+        "Thar be "
+    end
 end
