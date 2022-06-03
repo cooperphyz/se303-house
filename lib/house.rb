@@ -1,6 +1,6 @@
 class House
 
-    attr_reader :opener, :randomized, :verses, :house_verse
+    attr_reader :house_verse
     def initialize(pirate=false, randomized=false)
 
         if randomized == true && pirate == false
