@@ -38,6 +38,10 @@ class HouseVerse
         registry.prepend(candidate)
     end
 
+    def self.inherited(candidate)
+        register(candidate)
+    end
+
     HouseVerse.register(self)
 
     def line(number)
