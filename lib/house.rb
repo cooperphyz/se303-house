@@ -31,7 +31,7 @@ class HouseVerse
     end
 
     def self.registry
-        @registry ||= []
+        @registry ||= [HouseVerse]
     end
 
     def self.register(candidate)
@@ -78,6 +78,10 @@ end
 
 class HouseVerseRandom < HouseVerse
 
+    def self.handles?(randomized)
+        true
+    end
+
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
         
@@ -90,13 +94,23 @@ end
 
 class HouseVersePirate < HouseVerse
 
+    def self.handles?(pirate)
+        true
+    end
+
     def opener  
         "Thar be "
     end
 end
 
 class HouseVerseRandomPirate < HouseVerseRandom
+    def self.handles?(pirate)
+        true
+    end
 
+    def self.handles(randomized)
+        true
+    end
     def opener  
         "Thar be "
     end  
