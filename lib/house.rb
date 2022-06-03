@@ -30,7 +30,7 @@ class HouseVerse
     end
 
     def line(number)
-        "This is the %s.\n" % lyrics.last(number).join('')
+        "#{opener}the %s.\n" % lyrics.last(number).join('')
     end
 
     def opener
