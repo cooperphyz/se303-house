@@ -25,7 +25,6 @@ class House
 end
 
 class HouseVerse
-    attr_reader :randomized
 
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
