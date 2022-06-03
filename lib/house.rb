@@ -33,6 +33,10 @@ class HouseVerse
         "This is the %s.\n" % lyrics.last(number).join('')
     end
 
+    def opener
+        "This is "
+    end
+
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
  
