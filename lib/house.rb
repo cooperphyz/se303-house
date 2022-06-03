@@ -38,6 +38,8 @@ class HouseVerse
         registry.prepend(candidate)
     end
 
+    HouseVerse.register(self)
+
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
     end
