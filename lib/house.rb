@@ -1,9 +1,8 @@
 class House
 
     attr_reader :opener, :randomized, :verses
-    def initialize(pirate=false, randomized=true)
-        @pirate = pirate
-        @randomized = randomized
+    def initialize(pirate=true, randomized=false)
+
         if randomized == true && pirate == false
             @verses = HouseVerseRandom.new.lyrics
         elsif pirate == true && randomized == false
