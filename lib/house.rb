@@ -1,7 +1,7 @@
 class House
 
     attr_reader :opener, :randomized, :verses, :house_verse
-    def initialize(pirate=false, randomized=true)
+    def initialize(pirate=false, randomized=false)
 
         if randomized == true && pirate == false
             @house_verse = HouseVerseRandom.new
@@ -76,4 +76,8 @@ class HouseVersePirate < HouseVerse
     def opener  
         "Thar be "
     end
+end
+
+class HouseVerseRandomPirate < HouseVerseRandom
+    
 end
