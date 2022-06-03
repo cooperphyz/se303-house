@@ -5,9 +5,11 @@ class House
         if randomized == true && pirate == false
             house_verse = HouseVerseRandom.new
             @verses = HouseVerseRandom.new.lyrics
-        elsif pirate == true && randomized == false
+        elsif pirate == true && randomized == 
+            house_verse = HouseVersePirate.new
             @verses = HouseVersePirate.new.lyrics
         else
+            house_verse = HouseVerse.new
             @verses = HouseVerse.new.lyrics
         end
     end
