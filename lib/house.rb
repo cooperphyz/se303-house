@@ -26,6 +26,10 @@ end
 
 class HouseVerse
 
+    def self.registry
+        @registry ||= []
+    end
+
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
     end
