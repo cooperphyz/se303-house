@@ -77,7 +77,6 @@ end
 
 
 class HouseVerseRandom < HouseVerse
-    HouseVerse.register(self)
 
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
@@ -90,7 +89,6 @@ class HouseVerseRandom < HouseVerse
 end
 
 class HouseVersePirate < HouseVerse
-    HouseVerse.register(self)
 
     def opener  
         "Thar be "
@@ -98,7 +96,6 @@ class HouseVersePirate < HouseVerse
 end
 
 class HouseVerseRandomPirate < HouseVerseRandom
-    HouseVerse.register(self)
 
     def opener  
         "Thar be "
