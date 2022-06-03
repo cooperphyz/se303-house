@@ -52,3 +52,7 @@ end
 class HouseVerseRandom < HouseVerse
 
 end
+
+class HouseVersePirate < HouseVerse
+
+end
