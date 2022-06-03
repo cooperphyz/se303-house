@@ -33,6 +33,7 @@ class HouseVerse
 
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
+ 
         Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
     end
     
@@ -55,7 +56,14 @@ end
 
 
 class HouseVerseRandom < HouseVerse
-
+    def lyrics
+        newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
+        
+        newArrayOne.shuffle!
+        newArrayTwo.shuffle!
+ 
+        Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
+    end
 end
 
 class HouseVersePirate < HouseVerse
