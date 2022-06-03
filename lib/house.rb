@@ -30,6 +30,10 @@ class HouseVerse
         @registry ||= []
     end
 
+    def self.register(candidate)
+        registry.prepend(candidate)
+    end
+
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
     end
