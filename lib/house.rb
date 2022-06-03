@@ -4,7 +4,15 @@ class House
     def initialize(opener="This is ", randomized=false)
         @opener = opener
         @randomized = randomized
-        @verses = HouseVerse.new(randomized).lyrics
+        if randomized == true 
+            @verses = HouseVerseRandom.new(randomized).lyrics
+        end
+        if opener != "This is "
+            @verses = HouseVersePirate.new(randomized).lyrics
+        else
+            @verses = HouseVerse.new(randomized).lyrics
+        end
+        
     end
 
     def line(number)
