@@ -28,6 +28,10 @@ class HouseVerse
         @randomized = randomized
     end
 
+    def line(number)
+        "This is the %s.\n" % verses.last(number).join('')
+    end
+
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
  
