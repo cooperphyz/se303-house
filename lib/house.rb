@@ -1,7 +1,7 @@
 class House
 
     attr_reader :opener, :randomized, :verses, :house_verse
-    def initialize(pirate=true, randomized=true)
+    def initialize(pirate=false, randomized=false)
 
         if randomized == true && pirate == false
             @house_verse = HouseVerseRandom.new
@@ -26,10 +26,6 @@ end
 
 class HouseVerse
     attr_reader :randomized
-
-    def initialize(randomized = false)
-        @randomized = randomized
-    end
 
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
