@@ -1,19 +1,20 @@
 class House
 
-    attr_reader :opener, :randomized, :verses
-    def initialize(pirate=true, randomized=false)
+    attr_reader :opener, :randomized, :verses, :house_verse
+    def initialize(pirate=false, randomized=true)
+
         if randomized == true && pirate == false
-            house_verse = HouseVerseRandom.new
-        elsif pirate == true && randomized == 
-            house_verse = HouseVersePirate.new
+            @house_verse = HouseVerseRandom.new
+        elsif pirate == true && randomized == false
+            @house_verse = HouseVersePirate.new
         else
-            house_verse = HouseVerse.new
+            @house_verse = HouseVerse.new
         end
         @verses = house_verse.lyrics
     end
 
     def line(number)
-        "This is the %s.\n" % verses.last(number).join('')
+        house_verse.line(number)
     end
 
     def recite
@@ -29,7 +30,7 @@ class HouseVerse
     end
 
     def line(number)
-        "This is the %s.\n" % verses.last(number).join('')
+        "This is the %s.\n" % lyrics.last(number).join('')
     end
 
     def lyrics
