@@ -1,7 +1,7 @@
 class House
 
     attr_reader :opener, :randomized, :verses
-    def initialize(opener="This is ", randomized=true)
+    def initialize(opener="This is ", randomized=false)
         @opener = opener
         @randomized = randomized
         @verses = HouseVerse.new(randomized).lyrics
@@ -25,12 +25,10 @@ class HouseVerse
 
     def lyrics
         newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
-        newArrayOne.shuffle! if randomized == true
+        newArrayOne.shuffle! if randomized == true 
         newArrayTwo.shuffle! if randomized == true
-
-        newArrayThree = Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
-
-        return newArrayThree
+ 
+        Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
     end
     
     def fragments
@@ -48,4 +46,9 @@ class HouseVerse
           'malt that ', 'lay in the '
         ]
     end
+end
+
+
+class HouseVerseRandom < HouseVerse
+
 end
