@@ -1,9 +1,9 @@
 class House
 
     attr_reader :house_verse
-    def initialize(pirate=true, randomized=false)
+    def initialize(pirate=false, randomized=false)
 
-        @house_verse = HouseVerse.for(randomized)
+        @house_verse = HouseVerse.for(randomized, pirate)
         @verses = house_verse.lyrics
     end
 
@@ -18,17 +18,17 @@ end
 
 class HouseVerse
 
-    attr_reader :randomized. :pirate
+    attr_reader :randomized, :pirate
     def initialize(randomized)
         @randomized = randomized
         @pirate = pirate
     end
 
-    def self.for(randomized)
-        registry.find {|candidate| candidate.handles?(randomized)}.new(randomized)
+    def self.for(randomized, pirate)
+        registry.find {|candidate| candidate.handles?(randomized, pirate)}.new(randomized)
     end
 
-    def self.handles?(randomized)
+    def self.handles?(randomized, pirate)
         randomized == false
     end
 
@@ -80,8 +80,9 @@ end
 
 class HouseVerseRandom < HouseVerse
 
-    def self.handles?(randomized)
+    def self.handles?(randomized, pirate)
         randomized == true
+        pirate == false
     end
 
     def lyrics
@@ -96,11 +97,8 @@ end
 
 class HouseVersePirate < HouseVerse
 
-    def self.handles?(randomized)
+    def self.handles?(randomized, pirate)
         randomized == false
-    end
-
-    def self.handles?(pirate)
         pirate == true
     end
 
@@ -110,13 +108,11 @@ class HouseVersePirate < HouseVerse
 end
 
 class HouseVerseRandomPirate < HouseVerseRandom
-    def self.handles?(pirate)
-        true
+    def self.handles?(randomized, pirate)
+        randomized == true
+        pirate == true
     end
 
-    def self.handles(randomized)
-        true
-    end
     def opener  
         "Thar be "
     end  
