@@ -18,18 +18,8 @@ end
 
 class HouseVerse
 
-    attr_reader :randomized, :pirate
-    def initialize(randomized)
-        @randomized = randomized
-        @pirate = pirate
-    end
-
     def self.for(randomized, pirate)
-        registry.find {|candidate| candidate.handles?(randomized, pirate)}.new(randomized)
-    end
-
-    def self.handles?(randomized, pirate)
-        randomized == false
+        registry.find {|candidate| candidate.handles?(randomized, pirate)}.new(randomized, pirate)
     end
 
     def self.registry
@@ -44,7 +34,15 @@ class HouseVerse
         register(candidate)
     end
 
-    HouseVerse.register(self)
+    def self.handles?(randomized, pirate)
+        true
+    end
+
+    attr_reader :randomized, :pirate
+    def initialize(randomized, pirate)
+        @randomized = randomized
+        @pirate = pirate
+    end
 
     def line(number)
         "#{opener}the %s.\n" % lyrics.last(number).join('')
@@ -74,6 +72,13 @@ class HouseVerse
           'rat that ', 'ate the ',
           'malt that ', 'lay in the '
         ]
+    end
+end
+
+class HouseVerseNormal < HouseVerse
+    def self.handles?(randomized, pirate)
+        randomized == false
+        pirate == false
     end
 end
 
