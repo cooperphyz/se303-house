@@ -4,7 +4,6 @@ class House
     def initialize(pirate=false, randomized=false)
 
         @house_verse = HouseVerse.for(randomized, pirate)
-        @verses = house_verse.lyrics
     end
 
     def line(number)
