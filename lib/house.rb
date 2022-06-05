@@ -111,8 +111,9 @@ end
 
 class HouseVersePirate < HouseVerse
     def self.handles?(randomized, pirate)
-        false
-        #HouseVerse.register(self)
+        if randomized == false && pirate == true
+            true
+        end
     end
 
     def opener  
