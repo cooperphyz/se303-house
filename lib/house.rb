@@ -105,15 +105,10 @@ class HouseVerseRandomPirate < HouseVerse
     end
 
     def lyrics
-        newArrayOne, newArrayTwo = fragments.partition.with_index { |_,i| i.even? }
-        
-        newArrayOne.shuffle!
-        newArrayTwo.shuffle!
- 
-        Hash[newArrayOne.zip(newArrayTwo)].map { |k, v| "#{k}#{v}" }.append('house that Jack built')
+        HouseVerseRandom.new(randomized, pirate).lyrics
     end
 
-    def opener  
+    def opener
         "Thar be "
     end  
 end
