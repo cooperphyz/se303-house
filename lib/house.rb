@@ -109,6 +109,6 @@ class HouseVerseRandomPirate < HouseVerse
     end
 
     def opener
-        "Thar be "
+        HouseVersePirate.new(randomized, pirate).opener
     end  
 end
