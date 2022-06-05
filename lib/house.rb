@@ -34,7 +34,9 @@ class HouseVerse
     end
 
     def self.handles?(randomized, pirate)
-        true
+        randomized == false
+        pirate == false
+        HouseVerse.register(self)
     end
 
     attr_reader :randomized, :pirate
@@ -75,18 +77,26 @@ class HouseVerse
 end
 
 class HouseVerseNormal < HouseVerse
+
     def self.handles?(randomized, pirate)
         randomized == false
         pirate == false
+        HouseVerse.register(self)
     end
 end
 
 
 class HouseVerseRandom < HouseVerse
-
     def self.handles?(randomized, pirate)
-        randomized == true
-        pirate == false
+        if randomized == true
+            if pirate == false
+                true
+            else
+                false
+            end
+        end
+        false
+        #HouseVerse.register(self)
     end
 
     def lyrics
@@ -100,10 +110,9 @@ class HouseVerseRandom < HouseVerse
 end
 
 class HouseVersePirate < HouseVerse
-
     def self.handles?(randomized, pirate)
-        randomized == false
-        pirate == true
+        false
+        #HouseVerse.register(self)
     end
 
     def opener  
@@ -112,9 +121,11 @@ class HouseVersePirate < HouseVerse
 end
 
 class HouseVerseRandomPirate < HouseVerseRandom
+   
     def self.handles?(randomized, pirate)
         randomized == true
         pirate == true
+        HouseVerse.register(self)
     end
 
     def opener  
