@@ -34,9 +34,7 @@ class HouseVerse
     end
 
     def self.handles?(randomized, pirate)
-        if randomized == false && pirate == false
-            true
-        end
+        !randomized && !pirate
     end
 
     attr_reader :randomized, :pirate
