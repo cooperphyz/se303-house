@@ -1,7 +1,7 @@
 class House
 
     attr_reader :house_verse
-    def initialize(pirate=true, randomized=false)
+    def initialize(pirate=false, randomized=true)
 
         @house_verse = HouseVerse.for(randomized, pirate)
     end
@@ -116,9 +116,9 @@ end
 class HouseVerseRandomPirate < HouseVerseRandom
    
     def self.handles?(randomized, pirate)
-        randomized == true
-        pirate == true
-        HouseVerse.register(self)
+        if randomized == true && pirate == true
+            true
+        end
     end
 
     def opener  
