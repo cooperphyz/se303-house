@@ -98,7 +98,7 @@ class HouseVersePirate < HouseVerse
     end
 end
 
-class HouseVerseRandomPirate < HouseVerseRandom
+class HouseVerseRandomPirate < HouseVerse
    
     def self.handles?(randomized, pirate)
         randomized && pirate
